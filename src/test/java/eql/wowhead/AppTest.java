@@ -65,8 +65,8 @@ public void explicitScrollIntoView(WebDriver webDriver, WebElement elementToScro
 	@Before
 	public void setup() {
 		driver = SocleTechnique.choisirNavigateur(BROWSER);
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/driver/chromedriver.exe");
-		driver = new ChromeDriver();
+		/*System.setProperty("webdriver.chrome.driver", "src/main/resources/driver/chromedriver.exe");
+		driver = new ChromeDriver();*/
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
