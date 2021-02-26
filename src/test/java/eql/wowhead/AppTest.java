@@ -61,11 +61,12 @@ public void explicitScrollIntoView(WebDriver webDriver, WebElement elementToScro
 	WebDriver driver;
 	JavascriptExecutor js = (JavascriptExecutor) driver;  
 	
-
+	String BROWSER = System.getProperty("browser");
 	@Before
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/driver/chromedriver.exe");
-		driver = new ChromeDriver();
+		driver = SocleTechnique.choisirNavigateur(BROWSER);
+		//System.setProperty("webdriver.chrome.driver", "src/main/resources/driver/chromedriver.exe");
+		//driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
